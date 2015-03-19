@@ -28,6 +28,7 @@ exports.startServer = function(port, callback) {
 	var app = express();
 	// GET requests
 	app.get('/api/:service', serve);
+	app.get('/facebook/callback', facebookCallback);
 	// load services
 	services = readServices();
 	// serve
@@ -46,16 +47,22 @@ exports.stopServer = function(callback) {
 };
 
 function serve (request, response) {
-	var service = request.params.service;
-	if (!(service in services)) {
+	var serviceName = request.params.service;
+	if (!(serviceName in services)) {
 		return response.status(403).send({error: 'service ' + service + ' not found.'});
 	}
+	var service = services[serviceName];
 	service.sendRequest(request.query, function (error, result) {
 		if (error) {
 			return response.status(500).send({error: 'service ' + service + ' returned error: ' + error});
 		}
 		return response.send(result);
 	});
+}
+
+function facebookCallback (request, response) {
+	log.debug(request);
+	response.send('OK');
 }
 
 /**
