@@ -32,3 +32,5 @@ if (__filename == process.argv[1])
 {
 	exports.test(testing.show);
 }
+
+/**/
