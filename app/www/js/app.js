@@ -4,7 +4,10 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 angular.module('app', ['ionic', 'app.controllers', 'app.services'])
-
+.constant("api", {
+    "url": "http://localhost:3000",
+    "static_url" : "http://localhost"
+})
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -25,7 +28,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services'])
     templateUrl: 'templates/login.html',
     controller: 'LoginCtrl'
   });
-  
+
   $urlRouterProvider.otherwise('/login');
 
 });
