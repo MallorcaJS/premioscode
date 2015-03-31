@@ -1,4 +1,4 @@
-angular.module('logincontroller', ['LoginService'])
+angular.module('loginController', [])
 //Profile controller (ejemplo)
 .controller("loginCtrl", function($scope, $http, $window, $location) {
 	//LoginService.getLogin
