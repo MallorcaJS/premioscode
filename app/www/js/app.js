@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('app', ['ionic', 'app.controllers', 'app.services','loginController','ngCordova','menu'])
+angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova'])
 .constant("api", {
     "url": "http://localhost:8080",
     "static_url" : "images from client"
@@ -26,7 +26,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services','loginControll
     .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html',
-      controller: 'LoginCtrl'
+      controller: 'loginController'
     })
     .state('profile',{
       url : '/profile',
@@ -43,7 +43,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services','loginControll
     .state('menu',{
       url:'/menu',
       templateUrl:'templates/menu.html',
-      controller: 'menuCtrl'
+      //controller: 'menuCtrl'
     })
     //Fotos TODO Diego Xisco
     .state('fotos',{
