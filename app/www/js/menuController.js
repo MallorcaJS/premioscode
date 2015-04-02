@@ -1,5 +1,5 @@
-angular.module('app.controllers', [])
-.controller("menuController", function() {
+angular.module('app.controllers')
+.controller("menuController", [function() {
 
 	this.menuList =
 		[
@@ -25,4 +25,4 @@ angular.module('app.controllers', [])
 
 
 
-});
+}]);
