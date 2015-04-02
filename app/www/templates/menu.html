@@ -1,0 +1,26 @@
+<ion-view cache-view="false" view-title="Menu" ng-controller="menuCtrl as menu">
+    <ion-content>
+      <!--
+        TODO
+          · Agregar opciones de edición?
+          · Sincronizar con SRV (DB)
+      -->
+
+      <div class="list">
+        <div ng-repeat="menuItem in menu.menuList | orderBy:'order'">
+          <div class="item item-divider menuHeader item-icon-right" >
+            {{menuItem.category}}
+            <!-- <i class="icon ion-navicon"></i> -->
+          </div>
+          <a class="item" href="#" ng-repeat="option in menuItem.options">
+            {{option}}
+          </a>
+        <!--
+        <a class="item item-icon-centered" href="#">
+          <i class="icon ion-plus-circled"></i>
+        </a>
+        -->
+        </div>
+      </div>
+    </ion-content>
+</ion-view>
