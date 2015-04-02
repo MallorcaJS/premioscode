@@ -23,15 +23,15 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova'])
 .config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
+      .state('login', {
+      url: '/login',
+      templateUrl: 'templates/login.html',
+      controller: 'loginController'
+    })
     .state('layout',{
       url: '/layout',
       abstract: true,
       templateUrl: 'templates/layout.html'
-    })
-    .state('login', {
-      url: '/login',
-      templateUrl: 'templates/login.html',
-      controller: 'loginController'
     })
     .state('layout.profile',{
       url : '/profile',
@@ -59,8 +59,8 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova'])
     .state('layout.comments',{
       url:'/comments',
       templateUrl:'templates/comments.html',
-      controller: 'commentsCtrl'
-    })
+      controller: 'commentsController'
+    });
 
   $urlRouterProvider.otherwise('/login');
 
