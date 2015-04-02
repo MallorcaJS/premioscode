@@ -1,10 +1,11 @@
   <ion-view view-title="comments">
-    <ion-list>
-      <ion-item>Comments!</ion-item>
+  <ion-content>
+    <ion-list lazy-scroll>
       <ion-item ng-repeat="comment in comments">
        <img src="{{comment.pictureUrl}}">
        <h3>{{comment.name}}</h3> 
        <p>{{comment.text}}</p>
       </ion-item>
     </ion-list>
+  </ion-content>
   </ion-view>

@@ -24,18 +24,23 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova'])
 .config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
+    .state('layout',{
+      url: '/layout',
+      abstract: true,
+      templateUrl: 'templates/layout.html'
+    })
     .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html',
       controller: 'loginController'
     })
-    .state('profile',{
+    .state('layout.profile',{
       url : '/profile',
       TemplateUrl: 'templates/profile.html',
       controller: 'ProfileCtrl'
     })
     //Listado de atendees TODO Aleix
-    .state('atendees',{
+    .state('layout.atendees',{
       url : '/atendees',
       TemplateUrl: 'templates/atendees.html',
       controller: 'atendeesCtrl'
@@ -53,7 +58,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova'])
       controller: 'fotosCtrl'
     })
     //Comments TODO Kevin
-    .state('comments',{
+    .state('layout.comments',{
       url:'/comments',
       templateUrl:'templates/comments.html',
       controller: 'commentsController'
