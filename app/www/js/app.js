@@ -39,11 +39,10 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova'])
       TemplateUrl: 'templates/atendees.html',
       controller: 'atendeesCtrl'
     })
-    //Menu TODO Xisco Diego
     .state('menu',{
       url:'/menu',
       templateUrl:'templates/menu.html',
-      //controller: 'menuCtrl'
+      controller: 'menuController'
     })
     //Fotos TODO Diego Xisco
     .state('fotos',{
