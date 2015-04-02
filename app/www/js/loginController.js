@@ -1,7 +1,7 @@
-angular.module('app.controllers').controller('loginController', ['$scope', function ($scope) {
+angular.module('app.controllers').controller('loginController', ['$scope','loginService', function ($scope, loginService) {
     
     $scope.sayhi = function(){
-        alert('hi');
+        console.log(loginService.getLogin());
     }
 
 }]);
