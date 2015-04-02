@@ -3,12 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('app', [
-  'ionic', 
-  'app.controllers',
-  'app.services',
-  'ngCordova'])
-
+angular.module('app', ['ionic', 'app.controllers', 'app.services','loginController','ngCordova','menu'])
 .constant("api", {
     "url": "http://localhost:8080",
     "static_url" : "images from client"
@@ -25,26 +20,24 @@ angular.module('app', [
     }
   });
 })
-.config(function($stateProvider, $urlRouterProvider, $controllerProvider) {
+.config(function($stateProvider, $urlRouterProvider) {
 
-  $controllerProvider.allowGlobals();
-  
   $stateProvider
     .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html',
-      controller: 'loginController'
+      controller: 'LoginCtrl'
     })
     .state('profile',{
       url : '/profile',
       TemplateUrl: 'templates/profile.html',
-      //controller: 'ProfileCtrl'
+      controller: 'ProfileCtrl'
     })
     //Listado de atendees TODO Aleix
     .state('atendees',{
       url : '/atendees',
       TemplateUrl: 'templates/atendees.html',
-      //controller: 'atendeesCtrl'
+      controller: 'atendeesCtrl'
     })
     //Menu TODO Xisco Diego
     .state('menu',{
@@ -56,13 +49,13 @@ angular.module('app', [
     .state('fotos',{
       url:'/fotos',
       templateUrl:'templates/fotos.html',
-      //controller: 'fotosCtrl'
+      controller: 'fotosCtrl'
     })
     //Comments TODO Kevin
     .state('comments',{
       url:'/comments',
       templateUrl:'templates/comments.html',
-      //controller: 'commentsCtrl'
+      controller: 'commentsCtrl'
     })
 
   $urlRouterProvider.otherwise('/login');
