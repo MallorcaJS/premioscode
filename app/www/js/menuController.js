@@ -1,5 +1,5 @@
-angular.module('menu', [])
-.controller("menuCtrl", function() {
+angular.module('app.controllers', [])
+.controller("menuController", function() {
 
 	this.menuList =
 		[
