@@ -1,0 +1,11 @@
+  <ion-view view-title="comments" class="pane">
+  <ion-content>
+  <ul class="list">
+    <li class="item" ng-repeat="comment in comments">
+       <img src="{{comment.pictureUrl}}">
+       <h3>{{comment.name}}</h3> 
+       <p>{{comment.text}}</p>
+    </li>
+</ul>
+</ion-content>
+  </ion-view>

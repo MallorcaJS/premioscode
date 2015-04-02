@@ -6,10 +6,20 @@ var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
+var bower = require('gulp-bower');
+
 
 var paths = {
   sass: ['./scss/**/*.scss']
 };
+
+ 
+gulp.task('bower', function() {
+  return bower()
+    .pipe(gulp.dest('./bower_components'))
+});
+
+
 
 gulp.task('default', ['sass']);
 
