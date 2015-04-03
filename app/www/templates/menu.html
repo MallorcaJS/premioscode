@@ -5,19 +5,24 @@
           · Agregar opciones de edición?
           · Sincronizar con SRV (DB)
       -->
-
-      <ion-list class="list">
-        <ion-item collection-repeat="menuItem in menuList" style="padding:0px;">
-          <div class="item item-divider menuHeader item-icon-right" >
-            {{menuItem.category}}
-          </div>
-          <a class="item item-avatar" href="#" ng-repeat="option in menuItem.options">
+      <!--
+        TODO: Agregar soporte a swipe y opciones de editar y eliminar.
+        ref: http://ionicframework.com/docs/api/directive/ionList/
+      -->
+      <div collection-repeat="menuItem in menuList">
+        <div class="item item-divider" >
+          {{menuItem.category}}
+        </div>
+        <ion-list class="list" show-delete="false" show-reorder="false" can-swipe="true">
+          <ion-item class="item item-avatar" ng-repeat="option in menuItem.options" style="padding:0px;">
             <img ng-src="{{option.img}}" >
             <h2>{{option.name}}</h2>
             <p>{{option.description}}</p>
-          </a>
-        </ion-item>
-      </ion-list>
-
+            <!-- TODO agregar icnos para platos picantes, veganos y para celiacos. -->
+            <ion-option-button class="button-light icon ion-edit"></ion-option-button>
+            <ion-option-button class="button-light icon ion-trash-b"></ion-option-button>
+          </ion-item>
+        </ion-list>
+      <div>
     </ion-content>
 </ion-view>
