@@ -44,7 +44,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova'])
       TemplateUrl: 'templates/atendees.html',
       controller: 'atendeesCtrl'
     })
-    .state('menu',{
+    .state('layout.menu',{
       url:'/menu',
       templateUrl:'templates/menu.html',
       controller: 'menuController'
