@@ -1,4 +1,4 @@
-<ion-view cache-view="false" view-title="Menu" ng-controller="menuController as menu">
+<ion-view cache-view="false" view-title="Menu" ng-controller="menuController">
     <ion-content>
       <!--
         TODO
@@ -7,7 +7,7 @@
       -->
 
       <div class="list">
-        <div ng-repeat="menuItem in menu.menuList | orderBy:'order'">
+        <div ng-repeat="menuItem in menuList | orderBy:'order'">
           <div class="item item-divider menuHeader item-icon-right" >
             {{menuItem.category}}
             <!-- <i class="icon ion-navicon"></i> -->
