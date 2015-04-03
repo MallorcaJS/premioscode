@@ -1,28 +1,6 @@
 angular.module('app.controllers')
-.controller("menuController", [function() {
+.controller("menuController", ['$scope','menuService', function($scope,menuService) {
 
-	this.menuList =
-		[
-			{
-				"order" : 1,
-				"category" : "Salad",
-				"options" :
-				[
-					"Garden salad vinagrette dressing",
-					"Balsamic vinagrette dressing"
-				]
-			},
-			{
-				"order" : 2,
-				"category" : "Main course",
-				"options" :
-				[
-					"Main course 1",
-					"Main course 2"
-				]
-			}
-		];
-
-
+	$scope.menuList = menuService.getList();
 
 }]);
