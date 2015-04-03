@@ -4,21 +4,14 @@ angular.module('app.services').factory('menuService', ['$http', function ($http)
     getList: function(){
       return [
   			{
-  				"order" : 1,
   				"category" : "Salad",
   				"options" :
   				[
-  					"Garden salad vinagrette dressing",
-  					"Balsamic vinagrette dressing"
-  				]
-  			},
-  			{
-  				"order" : 2,
-  				"category" : "Main course",
-  				"options" :
-  				[
-  					"Main course 1",
-  					"Main course 2"
+            {
+              "img": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ7Ap8AJT8KDpyLjVgBPyl7HowYywG0OhX53l7Evqa1ZBm4Gxok",
+              "name": "Garden salad vinagrette dressing",
+              "description": "bla bla bla"
+            }
   				]
   			}
   		];

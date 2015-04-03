@@ -6,21 +6,18 @@
           · Sincronizar con SRV (DB)
       -->
 
-      <div class="list">
-        <div ng-repeat="menuItem in menuList | orderBy:'order'">
+      <ion-list class="list">
+        <ion-item collection-repeat="menuItem in menuList" style="padding:0px;">
           <div class="item item-divider menuHeader item-icon-right" >
             {{menuItem.category}}
-            <!-- <i class="icon ion-navicon"></i> -->
           </div>
-          <a class="item" href="#" ng-repeat="option in menuItem.options">
-            {{option}}
+          <a class="item item-avatar" href="#" ng-repeat="option in menuItem.options">
+            <img ng-src="{{option.img}}" >
+            <h2>{{option.name}}</h2>
+            <p>{{option.description}}</p>
           </a>
-        <!--
-        <a class="item item-icon-centered" href="#">
-          <i class="icon ion-plus-circled"></i>
-        </a>
-        -->
-        </div>
-      </div>
+        </ion-item>
+      </ion-list>
+
     </ion-content>
 </ion-view>
