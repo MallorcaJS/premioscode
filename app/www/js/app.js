@@ -5,33 +5,33 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova'])
 .constant("api", {
-    "url": "http://localhost:8080",
-    "static_url" : "images from client"
+  "url": "http://localhost:8080",
+  "static_url" : "images from client"
 })
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
-    if(window.cordova && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-    }
-    if(window.StatusBar) {
-      StatusBar.styleDefault();
-    }
-  });
+  if(window.cordova && window.cordova.plugins.Keyboard) {
+    cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+  }
+  if(window.StatusBar) {
+    StatusBar.styleDefault();
+  }
+});
 })
 .config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
-      .state('login', {
-      url: '/login',
-      templateUrl: 'templates/login.html',
-      controller: 'loginController'
-    })
     .state('layout',{
       url: '/layout',
       abstract: true,
       templateUrl: 'templates/layout.html'
+    })
+    .state('layout.login', {
+      url: '/login',
+      templateUrl: 'templates/login.html',
+      controller: 'loginController'
     })
     .state('layout.profile',{
       url : '/profile',
@@ -62,6 +62,6 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova'])
       controller: 'commentsController'
     });
 
-  $urlRouterProvider.otherwise('/login');
+    $urlRouterProvider.otherwise('/login');
 
-});
+  });
