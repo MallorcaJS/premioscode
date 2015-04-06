@@ -1,5 +1,5 @@
 angular.module('app.controllers').controller('loginController', ['$scope','loginService', function ($scope, loginService) {
-
+	
 	openFB.init({appId: '889540234418654'});
 
 	$scope.sayhi = function(){
@@ -12,5 +12,6 @@ angular.module('app.controllers').controller('loginController', ['$scope','login
 			}
 		}, {scope: 'email,read_stream,publish_stream'});
 	}
+
 
 }]);
