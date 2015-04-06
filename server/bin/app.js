@@ -14,6 +14,9 @@ var express = require('express');
 var testing = require('testing');
 var Log = require('log');
 
+//	services
+var menuAPI = require('../lib/services/menu.js');
+
 // globals
 var log = new Log(config.logLevel);
 var server;
@@ -26,8 +29,18 @@ exports.startServer = function(port, callback) {
 		port = config.expressPort;
 	}
 	var app = express();
+
+	app.use(
+		function(req, res, next) {
+			res.header("Access-Control-Allow-Origin", "*");
+			res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+			next();
+		}
+	);
+	
 	// GET requests
 	app.get('/api/:service', serve);
+	app.get('/wedding/:weddingId/menu', menuAPI.getList);
 	app.get('/facebook/callback', facebookCallback);
 	// load services
 	services = readServices();
