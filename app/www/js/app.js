@@ -62,6 +62,6 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova'])
       controller: 'commentsController'
     });
 
-    $urlRouterProvider.otherwise('/login');
+    $urlRouterProvider.otherwise('/layout/login');
 
   });
