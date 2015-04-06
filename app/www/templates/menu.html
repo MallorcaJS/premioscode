@@ -19,10 +19,40 @@
             <h2>{{option.name}}</h2>
             <p>{{option.description}}</p>
             <!-- TODO agregar icnos para platos picantes, veganos y para celiacos. -->
-            <ion-option-button class="button-light icon ion-edit"></ion-option-button>
+            <ion-option-button class="button-light icon ion-edit" ng-click="edit(option)"></ion-option-button>
             <ion-option-button class="button-light icon ion-trash-b"></ion-option-button>
           </ion-item>
         </ion-list>
       <div>
     </ion-content>
 </ion-view>
+<!--
+  TODO:
+    · Selector de imagenes bonito.
+    · Soporte a los botones de cancelar y guardar.
+    · Mejor con pop up?
+-->
+<script id="menuEdit.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar>
+      <h1 class="title">{{option.name}}</h1>
+    </ion-header-bar>
+    <ion-content>
+    <div class="list">
+      <label class="item item-input">
+        <img ng-src="{{option.img}}" >
+        <!-- ref: http://stackoverflow.com/questions/28415038/input-file-in-ipad-only-let-me-choose-pictures-using-ionic -->
+        <!-- <input type="file" capture="camera" accept="image/*" ng-model="option.img"/> -->
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Name" ng-model="option.name">
+      </label>
+      <label class="item item-input">
+        <textarea placeholder="Description" ng-model="option.description"></textarea>
+      </label>
+      <button class="button button-stable">Cancel</button>
+      <button class="button button-positive">Accept</button>
+    </div>
+    </ion-content>
+  </ion-modal-view>
+</script>
