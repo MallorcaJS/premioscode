@@ -10,7 +10,7 @@
 
 
     <ion-list lazy-scroll>
-      <ion-item collection-repeat="comment in comments | filter: 'created_at' ">
+      <ion-item ng-repeat="comment in comments.slice().reverse() ">
        <img src="{{comment.pictureUrl}}">
        <h3>{{comment.name}}</h3> 
        <p>{{comment.text}}</p>

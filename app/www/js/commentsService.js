@@ -52,9 +52,6 @@ angular.module('app.services').factory('commentsService', ['$http', function ($h
 
   addComment: function(comment){
 
-    // comments = this.getList();
-    console.log(comments)
-
     object = {
       "name": "Wedding app",
       "text": comment,
