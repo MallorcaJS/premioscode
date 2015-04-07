@@ -10,4 +10,9 @@ angular.module('app.controllers').controller('commentsController', ['$scope', 'c
 
     $scope.comments = commentsService.getList();
 
+    $scope.addCommentHandler = function(){
+      comment= document.querySelector('#commentText').value
+      return commentsService.addComment(comment);
+    }
+
 }]);
