@@ -50,10 +50,10 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova'])
       controller: 'menuController'
     })
     //Fotos TODO Diego Xisco
-    .state('fotos',{
-      url:'/fotos',
-      templateUrl:'templates/fotos.html',
-      controller: 'fotosCtrl'
+    .state('layout.photos',{
+      url:'/photos',
+      templateUrl:'templates/photos.html',
+      controller: 'photosController'
     })
     //Comments TODO Kevin
     .state('layout.comments',{

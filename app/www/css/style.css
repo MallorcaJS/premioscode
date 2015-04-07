@@ -3,3 +3,53 @@
 .item-divider.menuHeader {
   /*TODO: estilos del menú */
 }
+
+
+/* PHOTOS */
+.square{
+	position: relative;
+	/*background: red;*/
+}
+
+.square img{
+	position: relative;
+	width:30%;
+	display:inline;
+    /*
+    position: relative;
+    width: 30%;
+    padding-bottom : 30%;
+    margin:1.66%;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    */
+    z-index: 1;
+}
+
+.square .details {
+	position: absolute;
+	top:10px;
+	padding:0px 5px;
+	background: rgba(255,255,255,.6);
+	z-index: 100;
+	font-size: 80%;
+}
+
+.square .details.left {
+	left:0px;
+}
+
+.square .details.right {
+	right:0px;
+	right:0px;
+}
+
+.square .details .span{
+	display: block;
+}
+
+img.square:nth-child(2n){
+	--border:10px solid #FC0;
+	--padding:300px;
+}
