@@ -40,7 +40,11 @@ angular.module('app.services').factory('commentsService', ['$http', function ($h
           "likes": "32"
         }
       ]
-    }
+    },
+
+  addComment: function(){
+    
+  }
   }
 
 }]);
