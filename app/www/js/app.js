@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova'])
+angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova', 'ngMap'])
 .constant("api", {
   "url": "http://localhost:8080",
   "static_url" : "images from client"
@@ -60,6 +60,11 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova'])
       url:'/comments',
       templateUrl:'templates/comments.html',
       controller: 'commentsController'
+    })
+    .state('layout.map',{
+      url:'/map',
+      templateUrl:'templates/map.html',
+      controller: 'mapController'
     });
 
     $urlRouterProvider.otherwise('/layout/login');

@@ -15,5 +15,7 @@
     "shelljs": "^0.3.0",
     "gulp-bower": "0.0.10"
   },
-  "cordovaPlugins": []
+  "cordovaPlugins": [
+    "org.apache.cordova.geolocation"
+  ]
 }
