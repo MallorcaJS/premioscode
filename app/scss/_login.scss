@@ -4,14 +4,24 @@
 	  -webkit-background-size: 100% 100%;           
 	     -moz-background-size: 100% 100%;
 	       -o-background-size: 100% 100%;           
-	          background-size: 100% 100%; 
+	          background-size: 100% 100%;
+	.scroll{
+		height:100%;
+	}
 }
 
 .wedrr-logo{
-	margin:20% auto;
+	margin:40px auto;
 }
 
 .button-facebook{
 	background:#3B5998;
 	color:#FFF;
+	border:none;
+	@include border-radius(5px);
+	width:250px;
+	position:absolute;
+	bottom:50px;
+	left:50%;
+	margin-left:-125px;
 }
