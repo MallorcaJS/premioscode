@@ -1,0 +1,52 @@
+<ion-view cache-view="false" view-title="Photos" ng-controller="photosController" class="global-pane" padding="true">
+  <ion-content scroll="true">
+      <!--
+        TODO
+          · Agregar opciones de edición?
+          · Sincronizar con SRV (DB)
+      -->
+      <!--
+        TODO: Agregar soporte a swipe y opciones de editar y eliminar.
+        ref: http://ionicframework.com/docs/api/directive/ionList/
+      -->
+<!--
+<ul class="row gallery">
+  <li ng-repeat="item in list">
+      <img ng-src="{{item.src}}" />
+  </li>
+</ul>
+-->
+
+<div class="row">
+  <div ng-repeat="item in list" class="col">
+    <img ng-src="{{item.src}}" />
+  </div>
+</div>
+
+<!-- start of grid -->
+      <!--
+      <div class="row">
+      <ul>
+        <li class="square" ng-repeat="item in list">
+          <div class="col col-25">
+            <img class="" ng-src="{{ item.src }}">
+            <div class="details left">Uploaded by <strong>{{item.user}}</strong></div>
+            <div class="details right"><div class="icon ion-thumbsup">{{item.likes}}</div></div>
+          </div>
+        </li>
+      </ul>
+      </div>
+      -->
+      <!--
+      <div class="row responsive-md">
+          <div class="square col col-25" ng-repeat="item in list">
+              <img ng-src="{{item.src}}" width="100%" />
+              <div class="details left">Uploaded by <strong>{{item.user}}</strong></div>
+              <div class="details right"><div class="icon ion-thumbsup">{{item.likes}}</div></div>
+          </div>
+      </div>
+      -->
+
+      
+    </ion-content>
+</ion-view>
