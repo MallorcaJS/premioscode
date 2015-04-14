@@ -28,21 +28,21 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova'])
       abstract: true,
       templateUrl: 'templates/layout.html'
     })
-    .state('layout.login', {
+    .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html',
       controller: 'loginController'
     })
     .state('layout.profile',{
       url : '/profile',
-      TemplateUrl: 'templates/profile.html',
+      templateUrl: 'templates/profile.html',
       controller: 'ProfileCtrl'
     })
     //Listado de atendees TODO Aleix
-    .state('layout.atendees',{
-      url : '/atendees',
-      TemplateUrl: 'templates/atendees.html',
-      controller: 'atendeesCtrl'
+    .state('layout.att',{
+      url : '/att',
+      templateUrl: 'templates/att.html',
+      controller: 'attController'
     })
     .state('layout.menu',{
       url:'/menu',
@@ -62,6 +62,6 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova'])
       controller: 'commentsController'
     });
 
-    $urlRouterProvider.otherwise('/layout/login');
+    $urlRouterProvider.otherwise('/login');
 
   });
