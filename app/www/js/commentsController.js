@@ -12,6 +12,7 @@ angular.module('app.controllers').controller('commentsController', ['$scope', 'c
 
     $scope.addCommentHandler = function(){
       comment= document.querySelector('#commentText').value
+      document.querySelector('#commentText').value = ''
       return commentsService.addComment(comment);
     }
 
