@@ -1,13 +1,13 @@
 angular.module('app.controllers').controller('mapController', ['$scope', '$ionicLoading',  function ($scope, $ionicLoading) {
     
   $scope.info_position = {
-    lat: 43.07493,
-    lng: -89.381388
+    lat: 39.56754,
+    lng: 2.64820
   };
 
   $scope.center_position = {
-    lat: 43.07493,
-    lng: -89.381388
+    lat: 39.56754,
+    lng: 2.64820
   };
 
   $scope.my_location = "";

@@ -7608,27 +7608,23 @@ a.button {
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
   background-size: 100% 100%; }
+  .login .scroll {
+    height: 100%; }
 
 .wedrr-logo {
-  margin: 20% auto; }
+  margin: 40px auto; }
 
 .button-facebook {
   background: #3B5998;
-  color: #FFF; }
-
-.maps-view .center-map-action {
+  color: #FFF;
+  border: none;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 250px;
   position: absolute;
-  top: 35px;
-  z-index: 9; }
-  .maps-view .center-map-action .item.item-input-inset {
-    padding: 0px 5px; }
-  .maps-view .center-map-action .item-input-wrapper {
-    background: none; }
-.maps-view map {
-  width: 100%;
-  height: 100% !important; }
-.maps-view .scroll, .maps-view .mapWrap {
-  height: 100%; }
+  bottom: 50px;
+  left: 50%;
+  margin-left: -125px; }
 
 .maps-view .center-map-action {
   position: absolute;
