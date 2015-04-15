@@ -4,10 +4,6 @@ angular.module('app.controllers').controller('commentsController', ['$scope', 'c
    // $scope.shouldShowReorder = false;
    // $scope.listCanSwipe = true;
    
-    $scope.sayhi = function(){
-        alert('super comments');
-    }
-
     $scope.comments = commentsService.getList();
 
     $scope.addCommentHandler = function(){

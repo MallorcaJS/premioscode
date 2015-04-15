@@ -65,6 +65,11 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova', 
       url:'/map',
       templateUrl:'templates/map.html',
       controller: 'mapController'
+    })
+    .state('layout.wedding',{
+      url:'/wedding',
+      templateUrl: 'templates/wedding.html',
+      controller: 'weddingController'
     });
 
     $urlRouterProvider.otherwise('/login');
