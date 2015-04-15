@@ -25,4 +25,3 @@ angular.module('app.services').factory('attendeesService', ['$http', function ($
 
 }]);
 
-

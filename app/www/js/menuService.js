@@ -18,7 +18,4 @@ angular.module('app.services').factory('menuService', ['$resource', function ($r
     }
   }
 
-
-
-
 }]);

@@ -1,4 +1,4 @@
-angular.module('app.controllers').controller('attendeesController', ['$scope', 'attendeesService', function ($scope, attendeesService) {
+angular.module('app.controllers').controller('attendeesController', ['$scope', 'bbddServices', function ($scope, bbddServices) {
     
    // $scope.shouldShowDelete = false;
    // $scope.shouldShowReorder = false;

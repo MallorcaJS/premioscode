@@ -1,0 +1,23 @@
+  <ion-view view-title="comments">
+  <ion-content>
+
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" id="commentText" placeholder="Add your comment..">
+      </label>
+      <button  id="addComment" ng-click="addCommentHandler()" class="button button-block button-positive"> <i class="icon icon-left ion-plus"></i>Add </button>
+    </div>
+
+
+    <ion-list>
+      <ion-item ng-repeat="comment in comments">
+       <img src="{{comment.pictureUrl}}">
+       <h3>{{comment.name}}</h3> 
+       <p>{{comment.text}}</p>
+      </ion-item>
+    </ion-list>
+
+
+  </ion-content>
+
+  </ion-view>
