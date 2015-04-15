@@ -55,22 +55,7 @@ angular.module('app.services').factory('attendeesService', ['$http', function ($
   return {
     getList: function(){
       return attendees
-    },
-
-  addAttendee: function(attendee){
-
-    object = {
-          "fbId": "",
-          "email": "@nuevo",
-          "name": "Nuevo attendee",
-          "pictureUrl": "http://api.randomuser.me/portraits/thumb/men/2.jpg",
-          "created_at": new Date(),
-          "token": "6"
-        }
-
-    attendees.push(object);
-
-  }
+    }
   }
 
 }]);

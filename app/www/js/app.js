@@ -39,10 +39,10 @@ angular.module('app', ['ionic', 'app.controllers', 'app.services', 'ngCordova', 
       controller: 'ProfileCtrl'
     })
     //Listado de atendees TODO Aleix
-    .state('layout.att',{
-      url : '/att',
-      templateUrl: 'templates/att.html',
-      controller: 'attController'
+    .state('layout.attendees',{
+      url : '/attendees',
+      templateUrl: 'templates/attendees.html',
+      controller: 'attendeesController'
     })
     .state('layout.menu',{
       url:'/menu',

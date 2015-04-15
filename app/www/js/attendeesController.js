@@ -1,7 +1,9 @@
-angular.module('app.controllers').controller('attendeesController', ['$scope', 'attendeesService', function ($scope, attendeesService) {
+angular.module('app.controllers').controller('attendeesController', ['$scope', 'bbddServices', function ($scope, bbddServices) {
     
-    $scope.name1 = "name1";
-
-    $scope.attendees = attendeesService.getList();
+	var boda = bbddServices.query({bodaId: "a"});
+	boda.$promise.then(function(boda){
+   		$scope.attendees = boda.attendees;
+	})
+	
 
 }]);
