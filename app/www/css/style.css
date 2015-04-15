@@ -6,14 +6,16 @@
 
 
 /* PHOTOS */
-.gallery img{
-	widows: 400px;
-
-}
 .gallery {
 	list-style:none;
 }
+
 .gallery li{
 	padding:1%;
-	width: 50%;
-	display:inline-block;}
+	--width: 50%;
+	display:inline-block;
+}
+
+.gallery img{
+	max-width:100%!important;
+}

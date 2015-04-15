@@ -1,0 +1,149 @@
+.image-list-thumb {
+    padding: 2px 2px 2px 2px;
+    height: 100px;
+}
+ 
+.image-modal {
+    width: 100% !important;
+    height: 100%;
+    top: 0 !important;
+    left: 0 !important;
+}
+ 
+.transparent {
+    background: transparent !important;
+}
+ 
+.fullscreen-image {
+	max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+ 
+.slider {
+    width: 100%;
+    height: 100%;
+}
+
+
+#autor, #likes, #shareBox, #exitBox, #testBox{
+	background: rgba(255,255,255,.6);
+	padding:3px 8px;
+	--color: red;
+	position: absolute;
+	font-size: 80%;
+}
+
+
+#autor{
+	left:0;
+	bottom:0;
+}
+
+#likes{
+	left:0;
+	top:0;
+	font-weight: bold;
+}
+
+#likes i{
+	margin-left: 5px;
+}
+
+#likes.liked{
+	background:rgb(153, 68, 68);
+	color:#FFF;
+}
+
+#shareBox{
+	right:0;
+	top:0;
+}
+
+#shareBox i{
+	margin-right: 10px;
+}
+
+#exitBox{
+	right: 0;
+	bottom: 0;
+	background: none;
+	color:rgb(153, 68, 68);
+	color:#FFF;
+	font-size: 150%;
+}
+
+#testBox{
+	right: 20%;
+	bottom: 0;
+	background: rgb(153, 68, 68);
+	color:#FFF;
+	font-size: 150%;
+}
+
+/*************/
+
+.active .modal-backdrop-bg {
+	
+	opacity: 1!important;
+	background-color: #000!important;
+	
+}
+
+
+/******/
+
+@keyframes flickerAnimation { /* flame pulses */
+  0%   { opacity:0; font-size: 500%; }
+  50%  { opacity:.75; font-size: 2500%;}
+  100% { opacity:0; }
+}
+@-o-keyframes flickerAnimation { /* flame pulses */
+  0%   { opacity:0; font-size: 500%; }
+  50%  { opacity:.75; font-size: 2500%;}
+  100% { opacity:0; }
+}
+@-moz-keyframes flickerAnimation { /* flame pulses */
+  0%   { opacity:0; font-size: 500%; }
+  50%  { opacity:.75; font-size: 2500%;}
+  100% { opacity:0; }
+}
+@-webkit-keyframes flickerAnimation { /* flame pulses */
+  0%   { opacity:0; font-size: 500%; }
+  50%  { opacity:.75; font-size: 2500%;}
+  100% { opacity:0; }
+}
+
+
+#likeBox{
+	position: absolute;
+	font-size: 1000%;
+	color: rgb(153, 68, 68);
+	vertical-align: center;
+	display: table !important;
+	width: 100% !important;
+	height: 80% !important;
+	margin-top: 15%;
+	opacity: 0;
+}
+
+#likeBox.shown{
+	visibility:inherit;
+	font-size: 2500%;
+	-webkit-animation: flickerAnimation .75s 1;
+	-moz-animation: flickerAnimation .75s 1;
+	-o-animation: flickerAnimation .75s 1;
+	animation: flickerAnimation .75s 1;
+}
+
+#likeBox i{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
