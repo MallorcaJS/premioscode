@@ -1,0 +1,30 @@
+.item {
+    --background: red;
+    --padding: 30px;
+    margin:10px;
+}
+
+
+
+.item.w2 { width: 200px; }
+.item.w3 { width: 300px; }
+.item.w4 { width: 400px; }
+
+.item img{
+    max-width: 100%;
+}
+
+
+.item.h2 { height: 200px; }
+.item.h3 { height: 300px; }
+.item.h4 { height: 400px; }
+
+
+
+
+
+
+
+
+
+

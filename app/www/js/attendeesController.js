@@ -1,7 +1,10 @@
 angular.module('app.controllers').controller('attendeesController', ['$scope', 'attendeesService', function ($scope, attendeesService) {
     
-    $scope.name1 = "name1";
+   // $scope.shouldShowDelete = false;
+   // $scope.shouldShowReorder = false;
+   // $scope.listCanSwipe = true;
 
-    $scope.attendees = attendeesService.getList();
+   $scope.attendees = attendeesService.getList();
+   
 
 }]);
