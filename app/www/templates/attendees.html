@@ -1,10 +1,7 @@
-<ion-view view-title="attendees">
+<ion-view view-title="Attendees">
   <ion-content>
-  <p>Hola</p>
-
-  {{name1}}
     <ion-list>
-      <ion-item ng-repeat="attendee in attendees">
+      <ion-item ng-repeat="attendee in attendees" class="item-thumbnail-left">
        <img src="{{attendee.pictureUrl}}">
        <h3>{{attendee.name}}</h3> 
        <p>{{attendee.email}}</p>
