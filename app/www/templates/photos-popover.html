@@ -4,7 +4,7 @@
     <ion-slide-box on-slide-changed="slideChanged(index)" active-slide="activeSlide" >
         <ion-slide ng-repeat="image in list">
         	<div id="photoBox" ng-click="likeImage({{ image.id }})">
-	            <img ng-src="{{ image.src }}" class="fullscreen-image" />
+	            <img ng-src="img/wedding-images/1/{{ image.img_src }}" class="fullscreen-image" />
 	            <div id="likeBox" class="{{ shown == 'true' ? 'shown' : ''}}"><i class="ion-android-favorite"/></div>
 	            <div id="autor">By <strong>{{ user }}</strong></div>
 	            <div id="likes" class="{{ liked == 'true' ? 'liked' : ''}}"><span class="number">{{ likes }}</span> <i class="{{ liked == 'true' ? 'ion-android-favorite' : 'ion-android-favorite-outline' }}"/></div>

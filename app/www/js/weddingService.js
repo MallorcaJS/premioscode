@@ -1,16 +1,13 @@
 angular.module('app.services').factory('weddingService', ['$http', function ($http) {
 
-  wedding = {
+	wedding = {
+		'title': 'Xisco y Xisca',
+	}
 
-    'title': 'Xisco y Xisca',
-
-  }
-
-    
-  return {
-    getWedding: function(){
-      return wedding
-    }
-
+	return {
+		getWedding: function(){
+			return wedding
+		}
+	}
 
 }]);
