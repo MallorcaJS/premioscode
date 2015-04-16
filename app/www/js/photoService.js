@@ -1,4 +1,4 @@
-angular.module('app.services').factory('photosService', ['$http', function ($http) {
+angular.module('app.services').factory('PhotoService', ['$http', function ($http) {
 
   return {
     getList: function(){

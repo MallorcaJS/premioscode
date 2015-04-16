@@ -1,10 +1,12 @@
-angular.module('app.controllers').controller('attendeesController', ['$scope', 'bbddServices', function ($scope, bbddServices) {
-    
-   // $scope.shouldShowDelete = false;
-   // $scope.shouldShowReorder = false;
-   // $scope.listCanSwipe = true;
+'use strict';
 
-   $scope.attendees = attendeesService.getList();
+angular.module('app.controllers')
+.controller('AttendeesController', 
+	['$scope', '$stateParams', 'AttendeeService', 
+	function ($scope, $stateParams, AttendeeService) {
    
+   var id = $stateParams.weddingId;
+   
+   $scope.attendees = AttendeeService.getList();
 
 }]);

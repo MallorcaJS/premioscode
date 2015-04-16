@@ -1,0 +1,80 @@
+.wed-icon-plus:before,
+.wed-icon-plus{
+	font-size:60px !important;
+  	display:block !important;
+}
+
+.wedding-view,
+.weddings-view {
+	// background-color: darken($dark, 70%) !important;
+
+ 	// 	ion-content:before
+	// {
+	// 	content: "";
+	// 	position: absolute;
+	// 	left: 0;
+	// 	right: 0;
+	// 	top: 0;
+	// 	bottom: 0;
+	// 	z-index: -1;
+
+	// 	// opacity: 0.6;
+
+	// 	display: block;
+	// 	background: url($images-path+"/wedrr-bg.jpg") no-repeat center center fixed;
+	// 	-webkit-background-size: cover;
+	// 	-moz-background-size: cover;
+	// 	background-size: cover;
+
+	// 	// -webkit-filter: blur(1px);
+	// 	// -moz-filter: blur(1px);
+	// 	// -o-filter: blur(1px);
+	// 	// -ms-filter: blur(1px);
+	// 	// filter: blur(1px);
+	// }
+}
+
+.wedding-view {
+	.wedding-container {
+	    margin: 0px auto;
+	    margin-top: 4vh;
+	    text-align: center;
+  	}
+  	.wedding-title-top {
+    	font-size: 22px;
+  	}
+  	.wedding-title-bottom {
+		font-size: 16px;
+  	}
+	.wedding-name {
+		margin-top: 2vh;
+    	font-size: 22px;
+  	}
+  	.wedding-image {
+		// TODO	
+	}
+	.top-content
+	{
+		border-bottom: 1px solid $light;
+    	position: relative;
+    	height: 20vh;
+    	margin-bottom: 25vh;
+    	background-color: rgba(lighten($black, 10%), .70);
+		color:$light;
+	}
+	.bottom-content {
+		padding:0px;
+	    min-height:55vh;
+	    position: relative;
+
+	    .wedding-bio
+	    {
+	       text-align:center;
+	       margin: 6px 30px;
+	       padding: 15px 0px;
+	       font-size: 18px;
+	       color:$light;
+	    }
+	}
+}
+

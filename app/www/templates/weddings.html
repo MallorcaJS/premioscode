@@ -1,0 +1,18 @@
+<ion-view view-title="Weddings" class="weddings-view" cache-view="false">
+  <ion-content>
+    <div class="row-center padding-top padding-bottom">
+      <a class="button button-icon icon ion-plus-circled wed-icon-plus"></a>
+    </div>
+    <ion-list>
+      <ion-item class="item item-avatar" ng-repeat="wedding in weddings" href="#/layout/{{ wedding.id }}"
+      >
+       <img src="{{wedding.imgUrl}}">
+       <h2>{{wedding.name}}</h2>
+       <p>{{wedding.description}}</p>
+       <ion-option-button class="button-light icon ion-trash-b" ng-click="delete(option)">
+       </ion-option-button>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+  </ion-view>

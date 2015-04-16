@@ -7602,6 +7602,31 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.wedding-view ion-content:before, .weddings-view ion-content:before, .attendees-view ion-content:before, .comments-view ion-content:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  display: block;
+  background: url("../img/wedrr-bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; }
+
+.weddings-view ion-item.item a, .comments-view ion-item.item a, .attendees-view ion-item.item a {
+  background-color: #59446c !important; }
+.weddings-view ion-item.item p, .comments-view ion-item.item p, .attendees-view ion-item.item p {
+  color: #fff;
+  font-size: 14px; }
+.weddings-view .item, .comments-view .item, .attendees-view .item {
+  background-color: #59446c !important;
+  border-color: #877388; }
+.weddings-view .item h2, .comments-view .item h2, .attendees-view .item h2 {
+  color: #EFC4F0; }
+
 .login {
   background: url(../img/wedrr-bg.jpg);
   -webkit-background-size: 100% 100%;
@@ -7625,6 +7650,39 @@ a.button {
   bottom: 50px;
   left: 50%;
   margin-left: -125px; }
+
+.wed-icon-plus:before, .wed-icon-plus {
+  font-size: 60px !important;
+  display: block !important; }
+
+.wedding-view .wedding-container {
+  margin: 0px auto;
+  margin-top: 4vh;
+  text-align: center; }
+.wedding-view .wedding-title-top {
+  font-size: 22px; }
+.wedding-view .wedding-title-bottom {
+  font-size: 16px; }
+.wedding-view .wedding-name {
+  margin-top: 2vh;
+  font-size: 22px; }
+.wedding-view .top-content {
+  border-bottom: 1px solid #fff;
+  position: relative;
+  height: 20vh;
+  margin-bottom: 25vh;
+  background-color: rgba(25, 25, 25, 0.7);
+  color: #fff; }
+.wedding-view .bottom-content {
+  padding: 0px;
+  min-height: 55vh;
+  position: relative; }
+  .wedding-view .bottom-content .wedding-bio {
+    text-align: center;
+    margin: 6px 30px;
+    padding: 15px 0px;
+    font-size: 18px;
+    color: #fff; }
 
 .maps-view .center-map-action {
   position: absolute;

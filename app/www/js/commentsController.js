@@ -1,15 +1,21 @@
-angular.module('app.controllers').controller('commentsController', ['$scope', 'commentsService', function ($scope, commentsService) {
+'use strict';
+
+angular.module('app.controllers')
+.controller('CommentsController', 
+	['$scope', '$stateParams', 'CommentService', 
+	function ($scope, $stateParams, CommentService) {
     
    // $scope.shouldShowDelete = false;
    // $scope.shouldShowReorder = false;
    // $scope.listCanSwipe = true;
-   
-    $scope.comments = commentsService.getList();
+   var id = $stateParams.weddingId;
+
+   $scope.comments = CommentService.getList();
 
     $scope.addCommentHandler = function(){
       comment= document.querySelector('#commentText').value
       document.querySelector('#commentText').value = ''
-      return commentsService.addComment(comment);
+      return CommentService.addComment(comment);
     }
 
 }]);

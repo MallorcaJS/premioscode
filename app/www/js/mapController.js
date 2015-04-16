@@ -1,5 +1,12 @@
-angular.module('app.controllers').controller('mapController', ['$scope', '$ionicLoading',  function ($scope, $ionicLoading) {
-    
+'strict'
+
+angular.module('app.controllers')
+.controller('MapController', 
+  ['$scope', '$stateParams', '$ionicLoading',  
+  function ($scope, $stateParams, $ionicLoading) {
+  
+  var id = $stateParams.weddingId;
+
   $scope.info_position = {
     lat: 39.56754,
     lng: 2.64820

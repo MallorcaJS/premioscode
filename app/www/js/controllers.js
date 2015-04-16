@@ -1,1 +1,3 @@
-angular.module('app.controllers', ['ngResource'])
+'use strict';
+
+angular.module('app.controllers', ['ngResource']);

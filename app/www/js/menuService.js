@@ -1,5 +1,7 @@
-angular.module('app.services').factory('menuService', ['$resource', function ($resource) {
+'use strict';
 
+angular.module('app.services')
+.factory('MenuService', ['$resource', function ($resource) {
   var Menu = $resource(
     'http://127.0.0.1:8080/wedding/:weddingId/menu/:menuId',
     {

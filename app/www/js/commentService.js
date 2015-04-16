@@ -1,6 +1,9 @@
-angular.module('app.services').factory('commentsService', ['$http', function ($http) {
+'use strict';
 
-  comments = [
+angular.module('app.services')
+.factory('CommentService', ['$http', function ($http) {
+
+  var comments = [
         {
           "name": "Kevin O'Hagan",
           "text": "This is the first comment",

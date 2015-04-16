@@ -1,7 +1,11 @@
-angular.module('app.controllers')
-.controller("menuController", ['$scope','$ionicModal','menuService', function($scope,$ionicModal,menuService) {
+'strict'
 
-	$scope.menuList = menuService.getList();
+angular.module('app.controllers')
+.controller("MenuController", 
+  ['$scope', '$stateParams', '$ionicModal','MenuService', 
+  function($scope, $stateParams, $ionicModal, MenuService) {
+
+	$scope.menuList = MenuService.getList();
 
 
 	/* Copy paste http://ionicframework.com/docs/api/service/$ionicModal/ */

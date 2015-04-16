@@ -1,5 +1,8 @@
-angular.module('app.services').factory('loginService', ['$http', function ($http) {
-    
+'strict'
+
+angular.module('app.services')
+.factory('LoginService', 
+	['$http', function ($http) {  
 	return {
 		getLogin : function(req,res){
 			var login = {
@@ -9,5 +12,4 @@ angular.module('app.services').factory('loginService', ['$http', function ($http
 			return login;
 		}
 	}
-
 }]);

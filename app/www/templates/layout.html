@@ -12,27 +12,35 @@
 
   </ion-side-menu-content>
 
-  <!-- Left menu -->
-  <ion-side-menu side="left">
+   <ion-side-menu side="left">
     <ion-content>
       <ion-list>
-        <a menu-close class="item item-icon-left" href="#/layout/login" nav-transition="forward">
-          <i class="ion ion-person"></i> FB Login
+      <!--   <a menu-close class="item item-icon-left" href="#/layout/{{ weddingId }}/edit" nav-transition="forward">
+          <i class="ion ion-edit"></i> Edit
+        </a>       -->
+         <a menu-close class="item item-icon-left" href="#/layout/{{ weddingId }}" nav-transition="forward">
+          <i class="ion ion-document-text"></i> Detail
         </a>
-        <a menu-close class="item item-icon-left" href="#/layout/comments" nav-transition="forward">
-          <i class="ion ion-chatboxes"></i> Comments
-        </a>
-        <a menu-close class="item item-icon-left" href="#/layout/menu" nav-transition="forward">
-          <i class="ion ion-wineglass"></i> Menu
-        </a>
-        <a menu-close class="item item-icon-left" href="#/layout/photos" nav-transition="forward">
+        <a menu-close class="item item-icon-left" href="#/layout/{{ weddingId }}/photos" nav-transition="forward">
           <i class="ion ion-images"></i> Photos
         </a>
-        <a menu-close class="item item-icon-left" href="#/layout/att" nav-transition="forward">
+        <a menu-close class="item item-icon-left" href="#/layout/{{ weddingId }}/attendees" nav-transition="forward">
           <i class="ion ion-person-stalker"></i> Attendees
+        </a>
+        <a menu-close class="item item-icon-left" href="#/layout/{{ weddingId }}/comments" nav-transition="forward">
+          <i class="ion ion-chatboxes"></i> Comments
+        </a>
+        <a menu-close class="item item-icon-left" href="#/layout/{{ weddingId }}/menu" nav-transition="forward">
+          <i class="ion ion-wineglass"></i> Menu
+        </a>
+        <a menu-close class="item item-icon-left" href="#/layout/{{ weddingId }}/map" nav-transition="forward">
+          <i class="ion ion-map"></i> Map
+        </a>
+        <a menu-close class="item item-icon-left" href="#/weddings" nav-transition="forward">
+          <i class="ion ion-home"></i> Weddings
         </a>
       </ion-list>
     </ion-content>
   </ion-side-menu>
-
+  
 </ion-side-menus>
