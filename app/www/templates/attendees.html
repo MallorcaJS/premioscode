@@ -5,7 +5,7 @@
   <ion-content>
     <ion-list>
       <ion-item class="item item-avatar" ng-repeat="attendee in attendees" class="item-thumbnail-left">
-       <img src="{{attendee.pictureUrl}}">
+       <img ng-src="{{attendee.pictureUrl}}">
        <h2>{{attendee.name}}</h2> 
        <p>{{attendee.email}}</p>
       </ion-item>

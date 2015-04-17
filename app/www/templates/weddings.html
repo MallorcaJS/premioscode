@@ -6,7 +6,7 @@
     <ion-list>
       <ion-item class="item item-avatar" ng-repeat="wedding in weddings" href="#/layout/{{ wedding.id }}"
       >
-       <img src="{{wedding.imgUrl}}">
+       <img ng-src="{{ wedding.imgUrl }}">
        <h2>{{wedding.name}}</h2>
        <p>{{wedding.description}}</p>
        <ion-option-button class="button-light icon ion-trash-b" ng-click="delete(option)">
