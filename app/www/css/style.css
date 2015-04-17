@@ -19,3 +19,56 @@
 .gallery img{
 	max-width:100%!important;
 }
+
+
+
+
+.login {
+	--background: url(../img/wedrr-bg.jpg);
+	background: url(../img/wedrr-bg-02.jpg);
+	background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center top;
+    background-attachment: fixed;
+}
+
+
+.button-facebook {
+	background: #3B5998;
+	color: #FFF;
+	border: none;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	width: 250px;
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	margin-left: -125px;
+
+	background: none;
+	--border: 5px solid rgba(0,0,0,.2);
+	padding: 0px;
+	width: 220px;
+	margin-left: -110px;
+	font-weight: bold;
+	background: rgba(255,255,255,.4);
+	color: #000;
+	background: rgba(0,0,0,.4);
+	color: #FFF;
+
+	background: rgba(255,255,256,.75);
+	color: #57404C;
+	font-size: 15px;
+	height: 40px;
+	border-radius: 0;
+}
+
+
+
+.button-facebook .icon:before{
+  font-size: 30px;
+}
+
+.button-facebook i{
+	margin-right: 15px;
+}
