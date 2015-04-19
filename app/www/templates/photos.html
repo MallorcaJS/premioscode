@@ -1,6 +1,7 @@
-<link rel="stylesheet" href="css/photos.css">
-
-<ion-view cache-view="false" view-title="Photos" ng-controller="photosController">
+<ion-view view-title="Photos" class="photos-view">
+	<ion-nav-title>
+	    <span>Photos</span>
+  	</ion-nav-title>
 	<ion-content>
 	<!--<ion-content scroll="true">-->
 		<div class="pad-sides" data-masonry-options='{ "columnWidth": 20, "itemSelector": ".item" }'>
@@ -8,21 +9,3 @@
 		</div>
 	</ion-content>
 </ion-view>
-
-<style>
-
-ion-content{
-	background: #57404C;
-}
-
-.pad-sides{
-	background: #000;
-	padding-top:52px;
-}
-
-.pad-sides img{
-	max-width:30%;
-	margin:.6% .6% .6% 2.2%;
-}
-
-</style>

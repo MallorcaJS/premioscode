@@ -1,8 +1,9 @@
-angular.module('app.controllers',['ionic']).controller("photosController", ['$scope','$ionicModal','$ionicSlideBoxDelegate','photosService',
-
-	function($scope,$ionicModal,$ionicSlideBoxDelegate, photosService) {
+angular.module('app.controllers')
+.controller("PhotosController", 
+	['$scope', '$ionicModal', '$ionicSlideBoxDelegate', 'PhotoService',
+	function($scope, $ionicModal, $ionicSlideBoxDelegate, PhotoService) {
 	
-		$scope.list = photosService.getList();
+		$scope.list = PhotoService.getList();
 
 		/*
 		$ionicModal.fromTemplateUrl('image-modal.html', {
@@ -80,14 +81,14 @@ angular.module('app.controllers',['ionic']).controller("photosController", ['$sc
 
 				$scope.shown = "true"
 				$scope.likes++
-				photosService.getList()[index].likes = $scope.likes
+				PhotoService.getList()[index].likes = $scope.likes
 
 			} else {
 				console.log("Debería DESLIKEAR la " + index)
 				$scope.liked = 'false'
 				$scope.shown = 'false'
 				$scope.likes--
-				photosService.getList()[index].likes = $scope.likes
+				PhotoService.getList()[index].likes = $scope.likes
 			}
 
 		};
@@ -96,9 +97,9 @@ angular.module('app.controllers',['ionic']).controller("photosController", ['$sc
 			//$scope.shown = ""
 			$scope.shown = "false"
 			$scope.activeSlide = index;
-			$scope.likes = photosService.getList()[index].likes
-			$scope.user = photosService.getList()[index].user
-			$scope.liked = photosService.getList()[index].liked
+			$scope.likes = PhotoService.getList()[index].likes
+			$scope.user = PhotoService.getList()[index].user
+			$scope.liked = PhotoService.getList()[index].liked
 			/*
 			if (photosService.getList()[index].liked == "true"){
 				$scope.liked = "ion-android-favorite";

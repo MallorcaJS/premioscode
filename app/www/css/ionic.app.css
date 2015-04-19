@@ -7602,7 +7602,7 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-.wedding-view ion-content:before, .weddings-view ion-content:before, .attendees-view ion-content:before, .comments-view ion-content:before {
+.wedding-view ion-content:before, .weddings-view ion-content:before, .attendees-view ion-content:before, .comments-view ion-content:before, .menu-view ion-content:before {
   content: "";
   position: absolute;
   left: 0;
@@ -7627,13 +7627,13 @@ a.button {
 .weddings-view .item h2, .comments-view .item h2, .attendees-view .item h2 {
   color: #EFC4F0; }
 
-.login {
-  background: url(../img/wedrr-bg.jpg);
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  background-size: 100% 100%; }
-  .login .scroll {
+.login-view {
+  background: url(../img/wedrr-bg-02.jpg);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center top;
+  background-attachment: fixed; }
+  .login-view .scroll {
     height: 100%; }
 
 .wedrr-logo {
@@ -7649,7 +7649,28 @@ a.button {
   position: absolute;
   bottom: 50px;
   left: 50%;
-  margin-left: -125px; }
+  margin-left: -125px;
+  background: none;
+  padding: 0px;
+  width: 220px;
+  margin-left: -110px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.4);
+  color: #000;
+  background: rgba(0, 0, 0, 0.4);
+  color: #FFF;
+  background: rgba(255, 255, 255, 0.75);
+  color: #57404C;
+  font-size: 15px;
+  height: 40px;
+  border-radius: 0;
+  border-radius: 0; }
+
+.button-facebook .icon:before {
+  font-size: 30px; }
+
+.button-facebook i {
+  margin-right: 15px; }
 
 .wed-icon-plus:before, .wed-icon-plus {
   font-size: 60px !important;
@@ -7683,6 +7704,40 @@ a.button {
     padding: 15px 0px;
     font-size: 18px;
     color: #fff; }
+
+.photos-view .item {
+  background: red;
+  padding: 30px;
+  margin: 10px; }
+.photos-view .item.w2 {
+  width: 200px; }
+.photos-view .item.w3 {
+  width: 300px; }
+.photos-view .item.w4 {
+  width: 400px; }
+.photos-view .item img {
+  max-width: 100%; }
+.photos-view .item.h2 {
+  height: 200px; }
+.photos-view .item.h3 {
+  height: 300px; }
+.photos-view .item.h4 {
+  height: 400px; }
+.photos-view ion-content {
+  background: #57404C; }
+.photos-view .pad-sides {
+  background: #000;
+  padding-top: 52px; }
+.photos-view .pad-sides img {
+  max-width: 30%;
+  margin: 0.6% 0.6% 0.6% 2.2%; }
+.photos-view .gallery {
+  list-style: none; }
+.photos-view .gallery li {
+  padding: 1%;
+  display: inline-block; }
+.photos-view .gallery img {
+  max-width: 100% !important; }
 
 .maps-view .center-map-action {
   position: absolute;

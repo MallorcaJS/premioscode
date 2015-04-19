@@ -1,7 +1,8 @@
 //PHOTOS SOURCE
 //https://www.flickr.com/photos/impactsounds/sets/72157640563410853
 
-angular.module('app.services').factory('photosService', ['$http', function ($http) {
+angular.module('app.services')
+.factory('PhotoService', ['$http', function ($http) {
   return {
     getList: function(){
       return [

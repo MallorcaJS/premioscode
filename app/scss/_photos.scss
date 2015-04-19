@@ -1,8 +1,8 @@
 .photos-view
 {
 	.item {
-	    --background: red;
-	    --padding: 30px;
+	    background: red;
+	    padding: 30px;
 	    margin:10px;
 	}
 
@@ -13,10 +13,33 @@
 	.item img{
 	    max-width: 100%;
 	}
-
-
 	.item.h2 { height: 200px; }
 	.item.h3 { height: 300px; }
 	.item.h4 { height: 400px; }
 	// TODO	
+	// 
+	ion-content{
+		background: #57404C;
+	}
+
+	.pad-sides{
+		background: #000;
+		padding-top:52px;
+	}
+
+	.pad-sides img{
+		max-width:30%;
+		margin:.6% .6% .6% 2.2%;
+	}
+	.gallery {
+		list-style:none;
+	}
+
+	.gallery li{
+		padding:1%;
+		display:inline-block;
+	}
+	.gallery img{
+		max-width:100%!important;
+	}
 }
