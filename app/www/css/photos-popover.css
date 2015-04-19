@@ -100,22 +100,22 @@
 /******/
 
 @keyframes flickerAnimation { /* flame pulses */
-  0%   { opacity:0; font-size: 500%; }
+  0%   { opacity:0; font-size: 300%; }
   50%  { opacity:.75; font-size: 2500%;}
   100% { opacity:0; }
 }
 @-o-keyframes flickerAnimation { /* flame pulses */
-  0%   { opacity:0; font-size: 500%; }
+  0%   { opacity:0; font-size: 300%; }
   50%  { opacity:.75; font-size: 2500%;}
   100% { opacity:0; }
 }
 @-moz-keyframes flickerAnimation { /* flame pulses */
-  0%   { opacity:0; font-size: 500%; }
+  0%   { opacity:0; font-size: 300%; }
   50%  { opacity:.75; font-size: 2500%;}
   100% { opacity:0; }
 }
 @-webkit-keyframes flickerAnimation { /* flame pulses */
-  0%   { opacity:0; font-size: 500%; }
+  0%   { opacity:0; font-size: 300%; }
   50%  { opacity:.75; font-size: 2500%;}
   100% { opacity:0; }
 }
@@ -136,10 +136,10 @@
 #likeBox.shown{
 	visibility:inherit;
 	font-size: 2500%;
-	-webkit-animation: flickerAnimation .75s 1;
-	-moz-animation: flickerAnimation .75s 1;
-	-o-animation: flickerAnimation .75s 1;
-	animation: flickerAnimation .75s 1;
+	-webkit-animation: flickerAnimation .5s 1;
+	-moz-animation: flickerAnimation .5s 1;
+	-o-animation: flickerAnimation .5s 1;
+	animation: flickerAnimation .5s 1;
 }
 
 #likeBox i{
