@@ -17,7 +17,8 @@
       <a class="button button-icon icon ion-plus-circled wed-icon-plus"></a>
     </div> -->
     <ion-list>
-      <ion-item class="item item-avatar" ng-repeat="wedding in weddings" href="#/layout/{{ wedding.id }}"
+      <ion-item class="item item-avatar" ng-repeat="wedding in weddings | orderBy: 'date' "
+      href="#/layout/{{ wedding.id }}"
       >
        <img ng-src="{{ wedding.imgUrl }}">
        <h2>{{wedding.firstName}} & {{wedding.secondName}}</h2>

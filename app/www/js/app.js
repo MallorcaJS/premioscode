@@ -12,6 +12,10 @@ angular.module('app',
 })
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
+
+    // if(window.cordova){
+    //   $cordovaGoogleAnalytics.startTrackerWithId('UA-59328829-1');
+    // }
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if(window.cordova && window.cordova.plugins.Keyboard) {
@@ -31,7 +35,7 @@ angular.module('app',
     })
     .state('weddings', {
       url: '/weddings',
-      templateUrl: 'templates/weddings.html',
+      templateUrl: 'app/weddings/weddings.html',
       controller: 'WeddingsController'
     })
     .state('layout',{
@@ -44,7 +48,7 @@ angular.module('app',
       url : '/:weddingId',
       views: {
         'menuContent': {
-          templateUrl: "templates/wedding-detail.html",
+          templateUrl: "app/weddings/wedding-detail.html",
           controller: 'WeddingDetailController'
         }
       }

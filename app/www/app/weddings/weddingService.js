@@ -5,24 +5,19 @@ angular.module('app.services')
   var weddings = [
         {
           "id": 0,
-          "name": "Jorge & Miriam",
+          "firstName": "Jorge",
+          "secondName": "Miriam",
           "imgUrl": "http://api.randomuser.me/portraits/thumb/men/1.jpg",
-          "description" : "Pablo and Miriam wedding",
-          "date": new Date()
+          "date": new Date(2015, 1, 20),
+          "description": "Dear friends and family."
         },
         {
           "id": 1,
-          "name": "Kevin & Love",
+          "firstName": "Kevin",
+          "secondName": "Love",
           "imgUrl": "http://api.randomuser.me/portraits/thumb/men/1.jpg",
-          "description" : "Xisco and Miriam wedding",
-          "date": new Date()
-        },
-        {
-          "id": 2,
-          "name": "Jordi & Johana",
-          "imgUrl": "http://api.randomuser.me/portraits/thumb/men/1.jpg",
-          "description" : "Jorge and Miriam wedding",
-          "date": new Date()
+          "date": new Date(2015, 2, 20),
+          "description": "Dear friends and family. Vamos a darle candela"
         }
   ];
   var currentId;
@@ -39,6 +34,9 @@ angular.module('app.services')
     },
     getCurrentId: function(callback) {
       callback(currentId);
+    },
+    add: function(wedding) {
+      weddings.push(wedding);
     }
   }
 
