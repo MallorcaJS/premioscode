@@ -1,17 +1,11 @@
-<<<<<<< HEAD
 <ion-view view-title="Photos" class="photos-view">
 	<ion-nav-title>
 	    <span>Photos</span>
   	</ion-nav-title>
-=======
-<link rel="stylesheet" ng-href="css/photos.css">
-
-<ion-view cache-view="false" view-title="Photos" ng-controller="photosController">
->>>>>>> faccef1961bc99bf21e5b3290e0e0de17a8788dc
 	<ion-content>
 	<!--<ion-content scroll="true">-->
 		<div class="pad-sides" data-masonry-options='{ "columnWidth": 20, "itemSelector": ".item" }'>
-			<img ng-src="img/wedding-images/1/thumbs/{{ item.img_src_thumb }}" alt="a singer" ng-repeat="item in list" ng-click="showImages($index)">
+			<img ng-src="../img/wedding-images/1/thumbs/{{ item.img_src_thumb }}" alt="a singer" ng-repeat="item in list" ng-click="showImages($index)">
 		</div>
 	</ion-content>
 </ion-view>
