@@ -42,33 +42,66 @@ angular.module('app',
     })
     .state('layout.detail',{
       url : '/:weddingId',
-      templateUrl: 'templates/wedding-detail.html',
-      controller: 'WeddingDetailController'
+      views: {
+        'menuContent': {
+          templateUrl: "templates/wedding-detail.html",
+          controller: 'WeddingDetailController'
+        }
+      }
     })
     .state('layout.photos',{
       url:'/:weddingId/photos',
-      templateUrl:'templates/photos.html',
-      controller: 'PhotosController'
+      views: {
+        'menuContent': {
+          templateUrl:'templates/photos.html',
+          controller: 'PhotosController'
+        }
+      }
     })
     .state('layout.attendees',{
       url : '/:weddingId/attendees',
-      templateUrl: 'templates/attendees.html',
-      controller: 'AttendeesController'
+      views: {
+        'menuContent': {
+          templateUrl:'templates/attendees.html',
+          controller: 'AttendeesController'
+        }
+      }
+    })
+    .state('layout.attendee',{
+      url : '/attendee/:attendeeId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/attendee-detail.html',
+          controller: 'AttendeeDetailController'
+        }
+      }
     })
     .state('layout.comments',{
       url:'/:weddingId/comments',
-      templateUrl:'templates/comments.html',
-      controller: 'CommentsController'
+      views: {
+        'menuContent': {
+          templateUrl:'templates/comments.html',
+          controller: 'CommentsController'
+        }
+      }
     })
     .state('layout.menu',{
       url:'/:weddingId/menu',
-      templateUrl:'templates/menu.html',
-      controller: 'MenuController'
+      views: {
+        'menuContent': {
+          templateUrl:'templates/menu.html',
+          controller: 'MenuController'
+        }
+      }
     })
     .state('layout.map',{
       url:'/:weddingId/map',
-      templateUrl:'templates/map.html',
-      controller: 'MapController'
+      views: {
+        'menuContent': {
+          templateUrl:'templates/map.html',
+          controller: 'MapController'
+        }
+      }
     });
 
     $urlRouterProvider.otherwise('/login');

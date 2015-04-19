@@ -7,7 +7,7 @@ angular.module('app.controllers')
     
         $scope.weddings = [];
         // fetch weddings from service
-        WeddingService.getWeddings(function(results) {
+        WeddingService.getAll(function(results) {
           $scope.weddings = results;
         });
     }
@@ -19,7 +19,7 @@ angular.module('app.controllers')
         var id = $stateParams.weddingId;
         $scope.weddingId = id;
 
-        WeddingService.getWedding(id, function(result) {
+        WeddingService.get(id, function(result) {
           $scope.name = result.name;
         });
     }
