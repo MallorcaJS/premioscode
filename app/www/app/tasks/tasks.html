@@ -1,0 +1,74 @@
+<ion-view view-title="tasks" 
+          class="tasks-view"
+          ng-controller="TasksController" 
+          ng-init="init()">
+<!--   <header class="bar bar-header bar-positive">
+    <a href="#/shops" class="button button-icon">  
+      <i class="icon ion-ios7-arrow-back"></i>
+    </a>
+    <h1 class="title">{{task.title}}</h1>
+    <button class="button button-icon">
+      <i class="ion ion-plus"></i>
+    </button>
+  </header> -->
+  <ion-nav-title>
+    <span>Tasks</span>
+  </ion-nav-title>
+  <ion-nav-buttons side="right">
+    <button  class="button button-icon ion-plus" 
+                  ng-click="showAddTaskModal()">
+    </button>  
+  </ion-nav-buttons>
+  </ion-nav-bar>
+  <!-- <header class="bar bar-header bar-positive"> -->
+    
+    <!-- <ion-nav-buttons side="right">
+        <button  class="button button-icon ion-plus" 
+                  ng-click="showAddTaskModal()">
+        </button>
+    </ion-nav-buttons> -->
+  <!-- </header> -->
+  <ion-content has-header="true">
+    <ti-segmented-control on-select="segmentedChanged($index)">
+        <ti-segmented-control-button class="button-positive" title="'By Date'" selected>
+        </ti-segmented-control-button>
+        <ti-segmented-control-button class="button-positive" title="'Completed'" >
+        </ti-segmented-control-button>
+    </ti-segmented-control>
+    <div class="list fade-in-not-out" >
+      <div class="item"
+           ng-class="task.isDivider? 'item-divider':'item-checkbox'"
+           ng-repeat="task in ordered">
+          <!-- <div class="item item-divider" >
+              {{task.title}}
+          </div> -->
+          <div ng-show="task.isDivider">
+            {{task.date | date}}
+          </div>
+          <div ng-hide="task.isDivider">
+            <label class="checkbox">
+              <input type="checkbox" ng-change="completionChanged(task)" 
+                                     ng-model="task.isComplete" >
+            </label>
+            {{task.name}}
+            <!-- {{task.name}} -->
+          </div>
+            
+            <!-- {{task.date | date}} -->
+       <!--    </div> -->
+      </div>  
+    </div>   
+   <!--  <div class="list fade-in-not-out" >
+      <div class="item item-checkbox" 
+           ng-repeat="task in compleated | orderBy: 'date'" 
+           ng-class="{complete: task.isComplete}">
+          <label class="checkbox">
+               <input type="checkbox" 
+                      ng-change="compleatedChanged(task)" 
+                      ng-model="task.isComplete">
+          </label>
+          {{product.name}}
+      </div>   
+    </div> -->
+  </ion-content>
+</ion-view>

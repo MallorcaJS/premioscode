@@ -16,18 +16,20 @@ angular.module('app.controllers')
         WeddingService) {    
         
         $scope.addWeddingData = {};
+        $scope.editWeddingData = {};
+
         $scope.weddings = [];
         var i = 2;
 
         $scope.init = function() {
             // fetch weddings from service            
-            WeddingService.getAll(function(results) {
+            WeddingService.findAll(function(results) {
               $scope.weddings = results;
             });
         };
 
-        // add modal
-        $ionicModal.fromTemplateUrl('app/weddings/weddingAdd.html', {
+        // + Add +
+        $ionicModal.fromTemplateUrl('app/weddings/wedding-add.html', {
             scope: $scope
         }).then(function(resultModal) {
             $scope.weddingAddModal = resultModal;
@@ -99,12 +101,15 @@ angular.module('app.controllers')
 
         $scope.addWeddingItem = function(weddingToAdd) {
             $scope.weddings.push(weddingToAdd);
+            // call add service
         };
 
         // $scope.$on('$ionicView.beforeEnter', function(){
         //     console.log('BEFORE ENTER');
         //     $scope.init();
         // });
+        
+        // + Edit + (TODO)
     }
 ])
 .controller('WeddingDetailController', 
@@ -114,7 +119,7 @@ angular.module('app.controllers')
         var id = $stateParams.weddingId;
         $scope.weddingId = id;
 
-        WeddingService.get(id, function(result) {
+        WeddingService.findById(id, function(result) {
           $scope.wedding = result;
         });
     }

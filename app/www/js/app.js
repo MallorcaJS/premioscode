@@ -4,8 +4,11 @@ angular.module('app',
   ['ionic', 
   'app.controllers', 
   'app.services', 
+  'app.directives',
   'ngCordova', 
-  'ngMap'])
+  'ngMap',
+  'ti-segmented-control',
+  '$selectBox'])
 .constant("api", {
   "url": "http://localhost:8080",
   "static_url" : "images from client"
@@ -50,6 +53,15 @@ angular.module('app',
         'menuContent': {
           templateUrl: "app/weddings/wedding-detail.html",
           controller: 'WeddingDetailController'
+        }
+      }
+    })
+    .state('layout.tasks',{
+      url:'/:weddingId/tasks',
+      views: {
+        'menuContent': {
+          templateUrl:'app/tasks/tasks.html',
+          controller: 'TasksController'
         }
       }
     })

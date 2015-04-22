@@ -22,10 +22,10 @@ angular.module('app.services')
   ];
   var currentId;
   return {
-    getAll: function(callback) {
+    findAll: function(callback) {
       callback(weddings);
     },
-    get: function(id, callback) {
+    findById: function(id, callback) {
       currentId = id;
       $rootScope.$broadcast('wedding:updated', currentId);
       // var index = parseInt(currentId);

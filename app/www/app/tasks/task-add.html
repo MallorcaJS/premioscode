@@ -1,0 +1,50 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-positive">
+        <h1 class="title">Add Task</h1>
+        <div class="buttons">
+            <button class="button button-clear icon ion-close" 
+                    ng-click="closeAddTaskModal()">
+            </button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+            <form name="addTaskForm" ng-submit="submitAddTask()" >
+                <div class="list">
+                    <label class="item item-input">
+                        <input type="text" ng-required="true"
+                                           ng-model="addTaskData.name" 
+                                           placeholder="Name" >
+                    </label>
+                    <label class="item item-input">
+                        <input ng-required="true" 
+                               ng-model="addTaskData.date" 
+                               placeHolder="Date" type="date" >
+                    </label>
+                    <div class="item">
+                        <select-box ng-Selected-Value="selectedType" 
+                            ng-Selected-Id="selectedId" 
+                            ng-Item-Name="name" 
+                            ng-Item-Id="id" 
+                            ng-title="Selected Task Type" 
+                            ng-data="taskTypes" 
+                            ng-placeholder="Select type">
+                        </select-box>
+                    </div>
+                <!--     <div class="item item-input item-select">
+                        <div class="input-label">
+                            Account Type
+                        </div>
+                        <select 
+                                ng-model="addTaskData.type" 
+                                ng-options="item as item for item in taskTypes" ng-required="true">
+                                <option value="" disabled selected>Task type</option>
+                        </select>
+                    </div> -->
+                    <label class="item">
+                        <button ng-disabled="!addTaskForm.$valid" class="button button-block button-positive bs" type="submit"><i class="icon ion-ios7-checkmark-outline"></i> Done</button>
+                    </label>
+                </div>
+            </form>
+    </ion-content>
+</ion-modal-view>
+
