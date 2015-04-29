@@ -32,10 +32,9 @@ angular.module('app.services')
   //     'remove': { method: 'DELETE' }
   //   }
   //);
-  return {
-    getList: function(){
-      return [
+  var attendees = [
         {
+          "id": 0,
           "fbId": "",
           "email": "@kevin",
           "name": "Kevin O'Hagan",          
@@ -44,6 +43,7 @@ angular.module('app.services')
           "token": "0",
         },
         {
+          "id": 1,
           "fbId": "",
           "email": "@xisco",
           "name": "Xisco Llado",
@@ -51,7 +51,13 @@ angular.module('app.services')
           "created_at": new Date(),
           "token": "1",
         }
-      ]
+      ];
+  return {
+    getAll: function(callback){
+      callback(attendees);
+    },
+    get: function(id, callback) {
+      return callback(attendees[id]);
     }
   }
 }]);

@@ -17,7 +17,7 @@ angular.module('app.controllers')
         
         $scope.addWeddingData = {};
         $scope.weddings = [];
-        var i = 1;
+        var i = 2;
 
         $scope.init = function() {
             // fetch weddings from service            

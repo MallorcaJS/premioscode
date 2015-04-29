@@ -31,6 +31,7 @@ $images-path: "../img";
 .weddings-view,
 .attendees-view,
 .comments-view,
+.photos-view,
 .menu-view {
 
 	// background-color: darken($dark, 70%) !important;
@@ -64,20 +65,5 @@ $images-path: "../img";
 .weddings-view,
 .comments-view,
 .attendees-view {
-	/*ion-item.item a {
-  		//background-color: slategray !important;
-  		background-color: rgba(89, 68, 108, 1) !important;
-  		// box-shadow: inset 1px 1px 1px 1px red;
-	}
-	ion-item.item p {
-  		color: #fff;
-  		font-size: 14px;
-	}
-	.item {
-		background-color: rgba(89, 68, 108, 1) !important;
-		border-color: #877388;	
-	}
-	.item h2 {
-		color: #EFC4F0;
-	}*/
+
 }

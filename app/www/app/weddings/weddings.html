@@ -17,11 +17,12 @@
       <a class="button button-icon icon ion-plus-circled wed-icon-plus"></a>
     </div> -->
     <ion-list>
-      <ion-item class="item item-avatar" ng-repeat="wedding in weddings" href="#/layout/{{ wedding.id }}"
+      <ion-item class="item item-avatar" ng-repeat="wedding in weddings | orderBy: 'date' "
+      href="#/layout/{{ wedding.id }}"
       >
-       <img ng-src="img/wedding-images/{{ wedding.id }}/main-ico.jpg">
-       <h2>{{wedding.name}}</h2>
-       <p>{{wedding.description}}</p>
+       <img ng-src="{{ wedding.imgUrl }}">
+       <h2>{{wedding.firstName}} & {{wedding.secondName}}</h2>
+       <p>{{wedding.date | date}}</p>
        <ion-option-button class="button-light icon ion-trash-b" ng-click="delete(option)">
        </ion-option-button>
       </ion-item>
