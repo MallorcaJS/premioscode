@@ -35,7 +35,6 @@
 #autor, #likes, #shareBox, #exitBox, #testBox{
 	background: rgba(255,255,255,.6);
 	padding:3px 8px;
-	--color: red;
 	position: absolute;
 	font-size: 80%;
 }
@@ -92,7 +91,7 @@
 .active .modal-backdrop-bg {
 	
 	opacity: 1!important;
-	background-color: #000!important;
+	background-color: #281D23!important;
 	
 }
 

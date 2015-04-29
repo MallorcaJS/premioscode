@@ -16,23 +16,40 @@
           </div>
         </div>
       </div>
-      <map center="{{center_position.lat}},{{center_position.lng}}" zoom="15">
-        <marker
-            position="{{current_position.lat}},{{current_position.lng}}"
-            title="Hello Marker"
-            visible="true">
-        </marker>
-        <info-window id="1" position="{{info_position.lat}},{{info_position.lng}}" visible="true">
-          <div ng-non-bindable="">
-            <b>La iglesia (La Seu)</b><br>
-            La ceremonia tendra lugar a las 10h del sabado<br>
-            <!-- you want such as images and <a href="">links</a> <br> -->
-            <!-- <img style=" border-radius: 24px;" ng-src="http://lorempixel.com/50/50/food/?v=1"></img> -->
-            <!-- <img style=" border-radius: 24px;" ng-src="http://lorempixel.com/50/50/food/?v=2"></img> -->
-            <!-- <img style=" border-radius: 24px;" ng-src="http://lorempixel.com/50/50/food/?v=3"></img> -->
-          </div>
+      <div id="map"></div>
+      <div id="class" ng-repeat="marker in markers | orderBy : 'title'">
+           <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+      </div>
+<!--
+      <map center="39.56754,2.64820" zoom="6">
+        <info-window position="39.56754,2.64820" visible="true">
+          <span>Loation found using HTML5.</span>
         </info-window>
+        <info-window position="39.5752022,2.6414882" visible="true">
+          <span>Comilona</span>
+        </info-window>
+        <marker position="39.56754,2.64820" on-click="click()" title="Click to zoom"></marker>
       </map>
+-->
     </div>
+
+<style>
+
+#map {
+    height:100%;
+    width:100%;
+}
+.infoWindowContent {
+    font-size:  14px !important;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+h2 {
+    margin-bottom:0;
+    margin-top: 0;
+}
+
+</style>
+
   </ion-content>
 </ion-view>

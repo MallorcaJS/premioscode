@@ -4,23 +4,23 @@ angular.module('app.services')
 .factory('WeddingService', ['$rootScope', '$http', function ($rootScope, $http) {
   var weddings = [
         {
-          "id": "0",
+          "id": "1",
           "name": "Jorge & Miriam",
-          "imgUrl": "http://api.randomuser.me/portraits/thumb/men/1.jpg",
+          //"imgUrl": "img/wedding-images/1/main-s.jpg",
           "description" : "Pablo and Miriam wedding",
           "date": new Date()
         },
         {
-          "id": "1",
+          "id": "2",
           "name": "Kevin & Love",
-          "imgUrl": "http://api.randomuser.me/portraits/thumb/men/1.jpg",
+          //"imgUrl": "http://api.randomuser.me/portraits/thumb/men/1.jpg",
           "description" : "Xisco and Miriam wedding",
           "date": new Date()
         },
         {
-          "id": "2",
+          "id": "3",
           "name": "Jordi & Johana",
-          "imgUrl": "http://api.randomuser.me/portraits/thumb/men/1.jpg",
+          //"imgUrl": "http://api.randomuser.me/portraits/thumb/men/1.jpg",
           "description" : "Jorge and Miriam wedding",
           "date": new Date()
         }

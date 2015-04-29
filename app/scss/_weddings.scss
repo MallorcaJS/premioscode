@@ -32,6 +32,12 @@
 	// 	// -ms-filter: blur(1px);
 	// 	// filter: blur(1px);
 	// }
+
+
+	a.button .icon:before, a.button.icon:before, a.button.icon-left:before, a.button.icon-right:before{
+		color:#281D23;
+	}
+	
 }
 
 .wedding-view {
@@ -76,5 +82,40 @@
 	       color:$light;
 	    }
 	}
+
+	.wedding-container {
+		margin-top: 2vh;
+	}
+
+	.wedding-name {
+		margin-top: 0;
+	}
+
+	.top-content{
+		background: url(../img/wedding-images/1/main.jpg);
+		-webkit-background-size: cover;
+			-moz-background-size: cover;
+			background-size: cover;
+			height:500px;
+	}
+
+	.wedding-title-top{
+		margin-bottom: 5px;
+	}
+
+	.wedding-container{
+		margin-top: 0;
+	}
+
+	.wedding-name.ng-binding{
+		
+	}
+
+	.wedding-bio{
+		position: absolute;
+		bottom: 20px;
+		left: 0;
+	}
+
 }
 

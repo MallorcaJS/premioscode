@@ -1,4 +1,16 @@
 .comments-view
 {
 	// TODO	
+
+	.button.button-positive{
+		background:#281D23;
+		width:80%;
+		margin:10px 10%;
+	}
+	.button.button-positive i{
+		margin-right:10px;
+	}
+	.button.button-positive i:before{
+		font-size:100%;
+	}
 }

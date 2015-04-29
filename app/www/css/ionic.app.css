@@ -7602,6 +7602,24 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+/*
+.scroll-content.ionic-scroll{
+	background:#302129;
+}
+*/
+.scroll {
+  color: #57404C; }
+
+.scroll .list a.item-icon-left {
+  padding-left: 30px; }
+
+.scroll .list a.item-icon-left i {
+  margin-right: 15px; }
+
+.default-bar {
+  background: #281D23;
+  color: #FFF; }
+
 .wedding-view ion-content:before, .weddings-view ion-content:before, .attendees-view ion-content:before, .comments-view ion-content:before, .menu-view ion-content:before {
   content: "";
   position: absolute;
@@ -7611,21 +7629,10 @@ a.button {
   bottom: 0;
   z-index: -1;
   display: block;
-  background: url("../img/wedrr-bg.jpg") no-repeat center center fixed;
+  background: #57404C;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover; }
-
-.weddings-view ion-item.item a, .comments-view ion-item.item a, .attendees-view ion-item.item a {
-  background-color: #59446c !important; }
-.weddings-view ion-item.item p, .comments-view ion-item.item p, .attendees-view ion-item.item p {
-  color: #fff;
-  font-size: 14px; }
-.weddings-view .item, .comments-view .item, .attendees-view .item {
-  background-color: #59446c !important;
-  border-color: #877388; }
-.weddings-view .item h2, .comments-view .item h2, .attendees-view .item h2 {
-  color: #EFC4F0; }
 
 .login-view {
   background: url(../img/wedrr-bg-02.jpg);
@@ -7676,6 +7683,9 @@ a.button {
   font-size: 60px !important;
   display: block !important; }
 
+.wedding-view a.button .icon:before, .wedding-view a.button.icon:before, .wedding-view a.button.icon-left:before, .wedding-view a.button.icon-right:before, .weddings-view a.button .icon:before, .weddings-view a.button.icon:before, .weddings-view a.button.icon-left:before, .weddings-view a.button.icon-right:before {
+  color: #281D23; }
+
 .wedding-view .wedding-container {
   margin: 0px auto;
   margin-top: 4vh;
@@ -7704,9 +7714,35 @@ a.button {
     padding: 15px 0px;
     font-size: 18px;
     color: #fff; }
+.wedding-view .wedding-container {
+  margin-top: 2vh; }
+.wedding-view .wedding-name {
+  margin-top: 0; }
+.wedding-view .top-content {
+  background: url(../img/wedding-images/1/main.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 500px; }
+.wedding-view .wedding-title-top {
+  margin-bottom: 5px; }
+.wedding-view .wedding-container {
+  margin-top: 0; }
+.wedding-view .wedding-bio {
+  position: absolute;
+  bottom: 20px;
+  left: 0; }
+
+.comments-view .button.button-positive {
+  background: #281D23;
+  width: 80%;
+  margin: 10px 10%; }
+.comments-view .button.button-positive i {
+  margin-right: 10px; }
+.comments-view .button.button-positive i:before {
+  font-size: 100%; }
 
 .photos-view .item {
-  background: red;
   padding: 30px;
   margin: 10px; }
 .photos-view .item.w2 {
@@ -7726,8 +7762,8 @@ a.button {
 .photos-view ion-content {
   background: #57404C; }
 .photos-view .pad-sides {
-  background: #000;
-  padding-top: 52px; }
+  background: #281D23;
+  padding-top: 7px; }
 .photos-view .pad-sides img {
   max-width: 30%;
   margin: 0.6% 0.6% 0.6% 2.2%; }

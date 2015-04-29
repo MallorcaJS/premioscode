@@ -36,7 +36,7 @@ angular.module('app.controllers')
 	      // Execute action
 	    });
 	    $scope.$on('modal.shown', function() {
-	      console.log('Modal is shown!' + this);
+	      //console.log('Modal is shown!' + this);
 	    });
 
 	    $scope.showImages = function(index) {
@@ -64,18 +64,18 @@ angular.module('app.controllers')
 		$scope.slideChanged = function(index) {
 			updatePhotoInfo(index);
 			//jQuery("#likes number").html($scope.likes)
-			console.log('PHOTO [' + index + "]: from: " + $scope.user + " - " + $scope.likes + " likes");
+			//console.log('PHOTO [' + index + "]: from: " + $scope.user + " - " + $scope.likes + " likes");
 		};
 
 		$scope.shown = "false"
 
 		$scope.likeImage = function(index){
 
-			console.log("likeImagelikeImage")
+			//console.log("likeImagelikeImage")
 			
 			if ($scope.liked == 'false'){
-				console.log("Debería LIKEAR la " + index)
-				console.log("LIKE - OK");
+				//console.log("Debería LIKEAR la " + index)
+				//console.log("LIKE - OK");
 				
 				$scope.liked = 'true'
 
@@ -84,7 +84,7 @@ angular.module('app.controllers')
 				PhotoService.getList()[index].likes = $scope.likes
 
 			} else {
-				console.log("Debería DESLIKEAR la " + index)
+				//console.log("Debería DESLIKEAR la " + index)
 				$scope.liked = 'false'
 				$scope.shown = 'false'
 				$scope.likes--
