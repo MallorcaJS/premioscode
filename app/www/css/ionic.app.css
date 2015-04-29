@@ -7602,7 +7602,6 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-<<<<<<< HEAD
 /*
 .scroll-content.ionic-scroll{
 	background:#302129;
@@ -7621,10 +7620,7 @@ a.button {
   background: #281D23;
   color: #FFF; }
 
-.wedding-view ion-content:before, .weddings-view ion-content:before, .attendees-view ion-content:before, .comments-view ion-content:before, .menu-view ion-content:before {
-=======
 .wedding-view ion-content:before, .weddings-view ion-content:before, .attendees-view ion-content:before, .comments-view ion-content:before, .photos-view ion-content:before, .menu-view ion-content:before {
->>>>>>> master
   content: "";
   position: absolute;
   left: 0;
@@ -7633,10 +7629,7 @@ a.button {
   bottom: 0;
   z-index: -1;
   display: block;
-<<<<<<< HEAD
   background: #57404C;
-=======
->>>>>>> master
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover; }
@@ -7690,9 +7683,11 @@ a.button {
   font-size: 35px !important;
   display: block !important; }
 
+.wed-icon-plus h3 {
+  font-size: 12px; }
+
 .wedding-view a.button .icon:before, .wedding-view a.button.icon:before, .wedding-view a.button.icon-left:before, .wedding-view a.button.icon-right:before, .weddings-view a.button .icon:before, .weddings-view a.button.icon:before, .weddings-view a.button.icon-left:before, .weddings-view a.button.icon-right:before {
   color: #281D23; }
-
 
 .wedding-view .wedding-container {
   margin: 0px auto;
